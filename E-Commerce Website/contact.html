@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>E-Commerce</title>
+</head>
+
+<body>
+    <!-- Nav Bar Section -->
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-5" href="#"><img src="images/logo.jpg" alt="" class="logo">
+                <h3>E-Commerce</h3>
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex ms-auto" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-5">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="service.html">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="product.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="cart.html">Cart <sup id="cartlen" style="color: red;"></sup></a>
+                        <script>
+                            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                                function getnum(){
+                                    document.querySelector('#cartlen').innerHTML = cart.length
+                                }
+                                getnum()
+                        </script>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="signup.html">Login/Signup</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTACT US PAGE -->
+    <section class="contactSection">
+        <h1 class="heading my-8">CONTACT US</h1>
+    </section>
+
+    <main>
+        <section class="contactFirstSection">
+            <div class="contactLeftSection">
+                <h1 class="title">Get in touch</h1>
+                <p class="titleText">Share some details here. This is Flexible section where you can share anything you
+                    want. It could be details or some information.</p>
+                <div class="contact">
+                    <div class="contactInfo">
+                        <div class="info">
+                            <i class="ri-map-pin-line"></i>
+                            <h5>ADDRESS</h5>
+                        </div>
+                        <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
+                    </div>
+                    <div class="contactInfo">
+                        <div class="info">
+                            <i class="ri-phone-line"></i>
+                            <h5>PHONE</h5>
+                        </div>
+                        <p>(+91) 987 654 321</p>
+                    </div>
+                    <div class="contactInfo">
+                        <div class="info">
+                            <i class="ri-mail-line"></i>
+                            <h5>EMAIL</h5>
+                        </div>
+                        <p>e-commerce@gmail.com</p>
+                    </div>
+
+                    <div class="info">
+                        <h5>FOLLOW</h5>
+                        <div class="icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="ri-youtube-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contactRightSection">
+                <form action="" class="yourInfo">
+                    <label for="">Name</label><br>
+                    <input type="text" class="name" placeholder="First" required>
+                    <input type="text" class="name" placeholder="Last" required>
+                    <br>
+
+                    <label for="">Email</label><br>
+                    <input type="email" name="" id="email" required>
+                    <br>
+
+                    <label for="">Comment or Message</label><br>
+                    <textarea name="" id="comment" required></textarea>
+
+                    <button>SUBMIT</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="contactSecondSection">
+            <h1 class="Heading">Location</h1>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed/v1/place?q=2972+Westheimer+Rd.+Santa+Ana,+Illinois+85486&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </section>
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>Company name
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Smart Phone</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Electronic</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">TV</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Clothes</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Home Appliances</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Groceries</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            info@example.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">E-commerce.com</a>
+        </div>
+
+    </section>
+    </main>
+</body>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+<script src="app.js"></script>
+
+</html>
